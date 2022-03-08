@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ObsequioSorpresa</string>
+    <string name="welcome">¡Tenemos una sorpresa para ti!</string>
+    <string name="intro">Elige una de las tres cajas sorpresa y recibe un obsequio </string>
 </resources>
