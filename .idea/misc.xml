@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background_gradient.xml" value="0.1755" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_gift_beach.xml" value="0.152" />
+        <entry key="app/src/main/res/drawable/ic_gift_music.xml" value="0.152" />
+        <entry key="app/src/main/res/drawable/ic_what.xml" value="0.2015" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>

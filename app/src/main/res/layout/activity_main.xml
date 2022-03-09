@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.073" />
 
     <ImageView
-        android:id="@+id/imageViewLeft"
+        android:id="@+id/ivCenter"
         android:layout_width="@dimen/enigma_box"
         android:layout_height="@dimen/enigma_box"
         android:layout_marginStart="@dimen/margin_left"
@@ -64,13 +64,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnRight"
+        app:layout_constraintStart_toEndOf="@+id/ivLeft"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_what" />
 
     <ImageView
-        android:id="@+id/imageViewCenter"
+        android:id="@+id/ivRight"
         android:layout_width="@dimen/enigma_box"
         android:layout_height="@dimen/enigma_box"
         android:layout_marginStart="@dimen/margin_left"
@@ -78,35 +78,35 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageViewLeft"
+        app:layout_constraintStart_toEndOf="@+id/ivCenter"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_what" />
 
-    <Button
-        android:id="@+id/btnRight"
+    <ImageView
+        android:id="@+id/ivLeft"
         android:layout_width="@dimen/enigma_box"
         android:layout_height="@dimen/enigma_box"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_what" />
 
     <ImageView
-        android:id="@+id/imageViewResult"
-        android:layout_width="6dp"
-        android:layout_height="4dp"
+        android:id="@+id/ivObs"
+        android:layout_width="103dp"
+        android:layout_height="97dp"
         android:layout_marginTop="96dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLeft"
+        app:layout_constraintTop_toBottomOf="@+id/ivCenter"
+        app:layout_constraintVertical_bias="0.154"
         app:srcCompat="@drawable/ic_gift_pizza" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
