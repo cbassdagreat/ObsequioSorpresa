@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import cbassdagreat.github.obsequiosorpresa.databinding.ActivityMainBinding;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         llenarObs();
+        muestraObs(Collections.singletonList(list.get(0)));
+
 
         binding.ivRight.setOnClickListener(v->{
 
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Obsequio(R.drawable.ic_baseline_moped_24));
     }
 
-    public void muestraObs(List<Obsequio> posicion){
+    public void muestraObs(List posicion){
         binding.ivObs.setImageResource(R.drawable.ic_baseline_blender_24);
 
     }
