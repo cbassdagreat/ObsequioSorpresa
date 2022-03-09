@@ -3,6 +3,7 @@ package cbassdagreat.github.obsequiosorpresa;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -21,26 +22,39 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //
+
         llenarObs();
-        muestraObs(Collections.singletonList(list.get(0)));
+        //barajar();
+        //muestraObs(Collections.singletonList(list.get(1)));
 
 
         binding.ivRight.setOnClickListener(v->{
 
-            //muestraObs();
+            barajar();
+            muestraObs();
             binding.ivObs.setVisibility(View.VISIBLE);
+            (new Handler()).postDelayed(this::clear, 3000);
+
 
         });
 
         binding.ivCenter.setOnClickListener(v->{
-            //muestraObs();
+            barajar();
+            muestraObs();
             binding.ivObs.setVisibility(View.VISIBLE);
+            (new Handler()).postDelayed(this::clear, 3000);
+
 
         });
 
         binding.ivLeft.setOnClickListener(v->{
-            //muestraObs();
+
+            barajar();
+            muestraObs();
             binding.ivObs.setVisibility(View.VISIBLE);
+            (new Handler()).postDelayed(this::clear, 3000);
+            barajar();
 
 
         });
@@ -60,9 +74,19 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Obsequio(R.drawable.ic_baseline_moped_24));
     }
 
-    public void muestraObs(List posicion){
-        binding.ivObs.setImageResource(R.drawable.ic_baseline_blender_24);
+    public void muestraObs(){
+        binding.ivObs.setImageResource(list.get(0).getObs());
+    }
+
+    private void barajar(){
+        Collections.shuffle(list);
 
     }
+
+    private void clear(){
+        binding.ivObs.setVisibility(View.INVISIBLE);
+    }
+
+
 
 }
